@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenDesh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="auth-overlay" class="auth-overlay">
+    <div class="auth-box">
+        <h2>TEENDESH ACCESS</h2>
+        
+        <div id="main-auth-fields">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <div class="auth-buttons">
+                <button onclick="login()">Login</button>
+                <button onclick="signup()">Sign Up</button>
+            </div>
+            <hr>
+            <button class="guest-btn" onclick="showGuestFields()">Play as Guest (20 Days)</button>
+        </div>
+
+        <div id="guest-info-fields" style="display: none;">
+            <p>Guest Registration</p>
+            <input type="number" id="guest-age" placeholder="Age" min="13" max="100">
+            <select id="guest-gender" class="auth-input">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="auth-buttons" style="margin-top: 15px;">
+                <button onclick="guestLogin()">Start as Guest</button>
+                <button onclick="hideGuestFields()" style="border-color: #ff4444;">Back</button>
+            </div>
+        </div>
+
+        <p id="auth-error" style="color: #ff4444; font-size: 12px; margin-top: 10px;"></p>
+    </div>
+</div>
+
+        <hr>
+        <button class="guest-btn" onclick="guestLogin()">Play as Guest (20 Days)</button>
+        <p id="auth-error" style="color: #ff4444; font-size: 12px; margin-top: 10px;"></p>
+    </div>
+</div>
+
+    <button id="theme-toggle" class="corner-btn">🌙</button>
+    <a href="profile.html" id="profile-btn" class="corner-btn">👤</a>
+
+    <div class="online-status">
+        <div class="status-dot"></div>
+        <span id="user-count">0 Online</span>
+    </div>
+
+    <div class="star-container">
+        <div class="star-layer stars1"></div>
+        <div class="star-layer stars2"></div>
+    </div>
+
+    <div class="content">
+        <h1>TeenDesh</h1>
+       <button class="among-us-btn" onclick="goToWaiting()">Summon (1vs1)</button>
+        <button class="among-us-btn">Friends</button>
+<br>
+<br>
+<h2>About TeenDesh</h2>
+<p></p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
