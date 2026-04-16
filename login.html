@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenDesh - Access Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star-container">
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h1>TEENDESH</h1>
+            
+            <div class="tabs">
+                <button id="tab-login" class="active" onclick="switchTab('login')">LOGIN</button>
+                <button id="tab-signup" onclick="switchTab('signup')">SIGN UP</button>
+            </div>
+
+            <div id="login-form">
+                <input type="email" id="login-email" placeholder="Email Address">
+                <input type="password" id="login-password" placeholder="Password">
+                <button class="action-btn" onclick="login()">ENTER STATION</button>
+                <div class="divider">OR</div>
+                <button class="guest-btn" onclick="showGuestFields()">PLAY AS GUEST</button>
+            </div>
+
+            <div id="signup-form" style="display: none;">
+                <input type="text" id="username" placeholder="Username">
+                <input type="email" id="signup-email" placeholder="Email Address">
+                <div class="inline-inputs">
+                    <input type="number" id="age" placeholder="Age" min="13">
+                    <select id="gender">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <input type="password" id="signup-password" placeholder="Create Password">
+                <button class="action-btn signup-color" onclick="signup()">CREATE ACCOUNT</button>
+            </div>
+
+            <div id="guest-fields" style="display: none;">
+                <p class="subtitle">GUEST</p>
+                <input type="number" id="guest-age" placeholder="Age" min="13">
+                <select id="guest-gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="button-group">
+                    <button class="confirm-btn" onclick="guestLogin()">START</button>
+                    <button class="back-btn" onclick="hideGuestFields()">BACK</button>
+                </div>
+            </div>
+            
+            <p id="message-display"></p>
+        </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

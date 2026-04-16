@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenDesh - Private Channel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-page">
+    <div class="star-container">
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+    </div>
+
+    <div class="chat-wrapper">
+        <header class="chat-header">
+            <div class="partner-info">
+                <div class="status-dot"></div>
+                <span id="partner-name">Connecting...</span>
+            </div>
+            <div class="header-btns">
+                <button class="report-btn" onclick="openReportModal()">REPORT</button>
+                <button class="leave-btn" onclick="leaveChat()">LEAVE</button>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <p class="system-msg">ENCRYPTED CONNECTION ESTABLISHED. MESSAGES ARE NOT STORED.</p>
+        </div>
+
+        <form id="chat-input-form" class="chat-controls">
+            <input type="text" id="user-msg" placeholder="Type a message..." autocomplete="off">
+            <button type="submit" id="send-btn">SEND</button>
+        </form>
+    </div>
+
+    <div id="report-modal" class="modal">
+        <div class="modal-content">
+            <h3>REPORT USER</h3>
+            <p>Select a reason for the report:</p>
+            <select id="report-reason">
+                <option value="Hate Speech">Hate Speech / Bullying</option>
+                <option value="Inappropriate">Inappropriate Language</option>
+                <option value="Harassment">Harassment</option>
+                <option value="Spam">Spam</option>
+            </select>
+            <div class="modal-btns">
+                <button class="confirm-report" onclick="submitReport()">SUBMIT</button>
+                <button class="cancel-report" onclick="closeReportModal()">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="chat.js"></script>
+</body>
+</html>

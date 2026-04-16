@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenDesh - Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star-container">
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">← BACK TO STATION</a>
+        <button id="logout-btn" onclick="logout()">LOGOUT</button>
+    </nav>
+
+    <div class="profile-container">
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="avatar-circle">👤</div>
+            <h2 id="display-username">Loading...</h2>
+            <div class="badge" id="display-type">Member</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">AGE</span>
+                    <span class="value" id="display-age">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">GENDER</span>
+                    <span class="value" id="display-gender">--</span>
+                </div>
+            </div>
+            <div class="uid-section">
+                <span class="label">YOUR UNIQUE ID</span>
+                <div class="uid-box">
+                    <span id="display-uid">--</span>
+                    <button class="copy-btn" onclick="copyUID()" title="Copy ID">⎘</button>
+                </div>
+                <p class="uid-hint">Share this ID with friends so they can add you</p>
+            </div>
+        </div>
+
+        <!-- Right Card -->
+        <div class="friends-card">
+
+            <!-- SEARCH -->
+            <h3>CREWMATE SEARCH</h3>
+            <div class="add-friend-box">
+                <input type="text" id="search-username" placeholder="Username or #TD-XXXXXX">
+                <button onclick="searchUser()">SEARCH</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+
+            <hr style="border:1px solid #222; margin:20px 0;">
+
+            <!-- FRIEND REQUESTS -->
+            <h3>
+                FRIEND REQUESTS
+                <span id="requests-badge" class="requests-badge" style="display:none;">0</span>
+            </h3>
+            <div id="requests-list" class="requests-list">
+                <p class="empty-msg">No pending requests.</p>
+            </div>
+
+            <hr style="border:1px solid #222; margin:20px 0;">
+
+            <!-- CHAT REQUESTS -->
+            <h3>
+                CHAT REQUESTS
+                <span id="chat-requests-badge" class="requests-badge" style="display:none; background:#00aaff;">0</span>
+            </h3>
+            <div id="chat-requests-list" class="requests-list">
+                <p class="empty-msg">No chat requests.</p>
+            </div>
+
+            <hr style="border:1px solid #222; margin:20px 0;">
+
+            <!-- FRIENDS LIST -->
+            <h3>MY FRIENDS</h3>
+            <div id="friends-list" class="friends-list">
+                <p class="empty-msg">No friends yet.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="profile.js"></script>
+</body>
+</html>

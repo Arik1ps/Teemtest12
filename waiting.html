@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenDesh - Searching...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="waiting-page">
+    <div class="star-container">
+        <div class="star-layer stars1"></div>
+        <div class="star-layer stars2"></div>
+    </div>
+
+    <div class="waiting-ui">
+<div class="radar-container">
+    <div class="radar-crosshair-v"></div>
+    <div class="radar-crosshair-h"></div>
+    <div class="radar-sweep"></div>
+</div>
+        </div>
+        
+        <div class="status-box">
+            <h2 class="about-heading" data-text="SCANNING...">SCANNING...</h2>
+            <p id="match-status">Searching for nearby crewmates...</p>
+        </div>
+
+        <button class="among-us-btn" onclick="cancelSearch()">Cancel</button>
+    </div>
+
+    <script type="module" src="waiting.js"></script>
+</body>
+</html>
